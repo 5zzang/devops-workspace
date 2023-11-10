@@ -22,10 +22,10 @@ rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip terraform_${TERRAFORM_VERSI
 ## INSTALL COMMON DEPENDENCIES
 RUN apk add --no-cache --update \
 					 jq \
-                     git \
-                     zip \
-                     bash \
-                     fish \
+           git \
+           zip \
+           bash \
+           zsh \
 					 openjdk17 \
 					 maven \
 					 gradle \
@@ -39,4 +39,4 @@ RUN apk add --no-cache --update \
 ENV PATH /root/.local/bin:$PATH
 
 # start fish shell
-CMD fish
+CMD zsh
